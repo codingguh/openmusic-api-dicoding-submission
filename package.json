@@ -1,0 +1,29 @@
+{
+  "name": "openmusic-api-dicoding-submission",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:prod": "NODE_ENV=production node ./src/server.js",
+    "start:dev": "nodemon ./src/server.js",
+    "lint": "eslint ./src",
+    "migrate": "node-pg-migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.10",
+    "dotenv": "^16.4.5",
+    "joi": "^17.13.3",
+    "nanoid": "^3.3.7",
+    "node-pg-migrate": "^7.6.1",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^3.0.1"
+  }
+}

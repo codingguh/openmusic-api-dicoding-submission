@@ -1,0 +1,17 @@
+
+==== CARA SETTING DATABASE dan MEMBUAT USER serta memberikan HAK AKSES User ke DB ======
+1. Membuat USER teguh
+    CREATE USER teguh WITH ENCRYPTED PASSWORD 'teguh';
+2. Membuat Database openmusic
+    CREATE DATABASE openmusic;
+3. Berikan Hak akses database ke User teguh
+    GRANT ALL ON DATABASE openmusic TO teguh;
+    ALTER DATABASE openmusic OWNER TO teguh;
+4. Masuk ke DB OPENMUSIC with user teguh
+psql --username teguh --dbname openmusic
+
+
+==== CARA INSTALL pg dan node-pg-migrate dan migration=====
+1. npm install pg node-pg-migrate
+2. npm run migrate create "create table openmusic"
+3. npm run migrate up
