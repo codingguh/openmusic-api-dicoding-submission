@@ -60,7 +60,7 @@ class AlbumsHandler {
         };
     }
 
-    async getAlbumByIdHandler(request) {
+    async getAlbumByIdHandler(request,h) {
         try {
             const { id } = request.params;
             const album = await this._service.getAlbumById(id);
@@ -99,7 +99,7 @@ class AlbumsHandler {
      
           return {
             status: 'success',
-            message: 'Catatan berhasil diperbarui',
+            message: 'Album berhasil diperbarui',
           };
         } catch (error) {
             if (error instanceof ClientError) {
@@ -127,7 +127,7 @@ class AlbumsHandler {
           await this._service.deleteAlbumById(id);
           return {
             status: 'success',
-            message: 'Catatan berhasil dihapus',
+            message: 'Lagu berhasil dihapus',
           };
         } catch (error) {
             if (error instanceof ClientError) {
