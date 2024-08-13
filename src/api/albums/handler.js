@@ -64,7 +64,7 @@ class AlbumsHandler {
         try {
             const { id } = request.params;
             const album = await this._service.getAlbumById(id);
-            console.log('albuns'+album)
+   
             return {
               status: 'success',
               data: {
